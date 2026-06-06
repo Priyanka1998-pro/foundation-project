@@ -1,0 +1,125 @@
+<!doctype html>
+<head>
+    <title>She Can Foundation Connection Form||NGO Registered</title>
+    <style>
+         body{
+            background:linear-gradient(white,whitesmoke);
+            margin:0px;
+        }
+        .join{
+    display: flex;
+    justify-content: space-between;
+    align-items: flex-start;
+    padding-top: 0px;
+    background: rgb(248, 246, 246);
+}
+.team img{
+    margin-left: 180px;    
+    margin-top: 0px;
+    width: 600px;
+    height:840px;
+}
+.join_us{
+    padding:25px 160px;
+}
+.join_us h3{
+    padding-top: 40px;
+    letter-spacing: 8px;
+    font-size: 20px;
+    font-family: 'Segoe UI', Tahoma, Geneva, Verdana, sans-serif;
+    color: rgb(17, 16, 16);
+    margin-bottom: 30px;
+    text-align: center;
+}
+.join_us p{
+    font-size: 15px;
+    font-weight: bold;
+    font-family: 'Segoe UI', Tahoma, Geneva, Verdana, sans-serif;
+    word-spacing: 15px;
+    line-height: 1.7;
+    color:rgb(26, 25, 25);
+    margin-bottom: 30px;
+}
+.sign_box{
+            margin:50px auto;
+            padding:30px;
+            width:400px;
+            background: linear-gradient(white,whitesmoke);
+            border-radius: 30px;
+            box-shadow:0px 0px 6px rgb(160, 158, 157);
+            font-family: 'Segoe UI', Tahoma, Geneva, Verdana, sans-serif;
+        }
+        input,textarea{
+            margin:10px 0px;
+            width:100%;
+            padding:8px;
+            border-radius: 5px;
+            display: block;
+            box-sizing: border-box;
+            border: 1px solid #ccc;
+        }
+        textarea {
+            height: 100px;
+            resize: vertical; 
+            font-family: inherit;
+        }
+button{
+   width:100%;
+            color:White;
+            background:orangered;
+            margin:10px 0px;
+            padding:8px;
+            border-radius: 6px;
+            font-family: 'Segoe UI', Tahoma, Geneva, Verdana, sans-serif;
+            font-weight: bold;
+            border: none;
+}
+button:hover{
+          color:white;
+            background:orange;
+}
+    </style>
+</head>
+<body>
+    <section class="join">
+    <div class="team">
+        <img src="contact.avif" alt="team photo">
+    </div>
+    <div class="join_us">
+        <h3>CONTACT US</h3>
+        <p>Fill out the form below, and our team will get back to you within 24 hours.<p>
+        <form class="sign_box" action="success.html" method="post" onsubmit="return validateForm()">
+        <label for="first">Name</label>
+    <input type="text" id="first" name="fname" required/>
+    <label for="email">Email Id</label>
+    <input type="email" id="email" name="mail" pattern="[a-z0-9._%+-]+@[a-z0-9.-]+\.[a-z]{2,}$" 
+       title="Please enter a valid email (e.g. name@gmail.com)" required/>
+    <label for="msg">Message</label>
+   <textarea id="msg" name="message" required></textarea>
+    <button type="submit">SEND</button>
+        </form> 
+    </div>
+</section>
+</body>
+<script>
+   function validateForm() {
+    let name = document.getElementById("first").value.trim();
+    let email = document.getElementById("email").value.trim();
+    let message = document.getElementById("msg").value.trim();
+    if (name === "") {
+        alert("Please enter your name.");
+        return false;
+    }
+    if (email === "") {
+        alert("Please enter your email address.");
+        return false;
+    }
+    if (message === "") {
+        alert("Please enter your message.");
+        return false;
+    }
+    alert("Form submitted successfully!");
+    return true;
+}
+</script>
+</html>
